@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="tasks-container"></div>
+</body>
+<script>
+    let tasks= [
+        { title: "Do Homework", isUrgent: true },
+        { title: "Wash Dishes", isUrgent: false },
+    ];
+
+    const tasksContainer = document.getElementById('tasks-container');
+    tasks.forEach(task => {
+        const taskDiv = document.createElement('div');
+        taskDiv.textContent = task.title;
+        if (task.isUrgent) {
+            taskDiv.style.backgroundColor = 'red';
+        }
+        tasksContainer.appendChild(taskDiv);
+
+    });
+</script>
+</html>
